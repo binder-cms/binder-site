@@ -4,9 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fdee1ce118f95aacf475b59dd23f0777",
-    "content-hash": "a1972b4b5b1077299bd55f93265025e6",
+    "hash": "af90359b7e203169e91c2f6c64e9cfee",
+    "content-hash": "401838e6b507fe57626b6ff441df9213",
     "packages": [
+        {
+            "name": "binder-cms/binder-cms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/binder-cms/binder-cms.git",
+                "reference": "15262ca289f70398b02876ac4df62194ec88e06e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/binder-cms/binder-cms/zipball/15262ca289f70398b02876ac4df62194ec88e06e",
+                "reference": "15262ca289f70398b02876ac4df62194ec88e06e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "sensio/framework-extra-bundle": "~3.0",
+                "symfony/symfony": "~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "dev-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Binder\\": "src/Binder/",
+                    "Tests\\Binder\\": "tests/Binder"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ian Phillips",
+                    "email": "ian.f.phillips@gmail.com"
+                }
+            ],
+            "description": "The source-controlled CMS",
+            "support": {
+                "source": "https://github.com/binder-cms/binder-cms/tree/master",
+                "issues": "https://github.com/binder-cms/binder-cms/issues"
+            },
+            "time": "2016-12-08 05:41:57"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.7",
@@ -1522,7 +1572,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "binder-cms/binder-cms": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

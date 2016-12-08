@@ -1,0 +1,2 @@
+binder_page_routing:
+    resource: "@BinderPageBundle/Resources/config/routing.yml"
