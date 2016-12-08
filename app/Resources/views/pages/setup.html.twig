@@ -1,0 +1,52 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Setup{% endblock %}
+
+{% block main %}
+    <section id="symfony">
+        <h2>Start a new Symfony project</h2>
+        <p>
+            Start a new Symfony project according to
+            <a href="https://symfony.com/doc/current/setup.html" target="_blank">the instructions</a>
+            on the Symfony website.
+        </p>
+    </section>
+
+    <section id="add-binder">
+        <h2>Add Binder CMS to your project</h2>
+        <p>
+            Add Binder CMS to your project's <code>composer.json</code> file by typing:
+        </p>
+        <pre>
+            composer require "binder-cms/binder-cms dev-master"
+        </pre>
+        <p>
+            Then add the <code>BinderPageBundle</code> to <code>app/AppKernel.php</code> like so:
+        </p>
+        <pre>
+            class AppKernel extends Kernel
+            {
+                public function registerBundles()
+                {
+                    $bundles = [
+                        // other bundles...
+                        new Binder\PageBundle\BinderPageBundle(),
+                    ];
+                    // ...
+                }
+                // ...
+            }
+        </pre>
+    </section>
+
+    <section id="routing">
+        <h2>Routing</h2>
+        <p>
+            Add the following to your <code>app/config/routing.yml</code>:
+        </p>
+        <pre>
+            binder_page_routing:
+                resource: "@BinderPageBundle/Resources/config/routing.yml"
+        </pre>
+    </section>
+{% endblock main %}

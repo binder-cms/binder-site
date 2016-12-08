@@ -4,7 +4,7 @@ namespace Tests\AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class PagesTest extends WebTestCase
+class IndexPageTest extends WebTestCase
 {
     public function testIndex_getRootPath_hasExpectedSection()
     {
