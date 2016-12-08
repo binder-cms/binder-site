@@ -1,0 +1,42 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Welcome to Binder CMS{% endblock %}
+
+{% block main %}
+
+    <section id="what">
+        <h2>What is Binder CMS?</h2>
+        <p>
+            Binder is a content management system (CMS) to help you build a website.
+        </p>
+    </section>
+
+    <section id="who">
+        <h2>Who is this for?</h2>
+        <p>
+            Binder is for people who want to:
+        </p>
+        <ul>
+            <li>code HTML and CSS by hand;</li>
+            <li>build a website using their preferred text editor or IDE;</li>
+            <li>maintain their website in their preferred version control system
+                (eg, <a href="https://git-scm.com" target="_blank">Git</a>).
+            </li>
+        </ul>
+        <p>
+            If you do not know how to write HTML by hand, then this is not for you. You
+            probably want a more &quot;traditional&quot; CMS such as
+            <a href="https://wordpress.org" target="_blank">Wordpress</a>.
+        </p>
+
+    </section>
+
+    <section id="why">
+        <h2>Why another content management system?</h2>
+        <p>
+            If you match the target audience described above, then you might already
+            know why a traditional CMS is not for you.
+        </p>
+    </section>
+
+{% endblock main %}
