@@ -39,6 +39,7 @@ def apache():
         destination='/etc/apache2/sites-enabled/binder-site.conf',
         use_sudo=True,
         context={'appdir': env.appdir})
+    sudo('a2enmod ssl')
     sudo('apache2ctl restart')
 
 

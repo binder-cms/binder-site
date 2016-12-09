@@ -1,6 +1,19 @@
 <VirtualHost *:80>
     ServerName binder-cms.org
     ServerAlias www.binder-cms.org
+    Redirect permanent / https://binder-cms.org/
+</VirtualHost>
+
+<VirtualHost *:443>
+    ServerName binder-cms.org
+    ServerAlias www.binder-cms.org
+
+    SSLEngine on
+    SSLCertificateKeyFile /etc/letsencrypt/live/binder-cms.org/privkey.pem
+    SSLCertificateFile /etc/letsencrypt/live/binder-cms.org/cert.pem
+    SSLCertificateChainFile /etc/letsencrypt/live/binder-cms.org/chain.pem
+    # Replace previous two lines with this for Apache >= 2.4.8.
+    #SSLCertificateFile /etc/letsencrypt/live/binder-cms.org/fullchain.pem
 
     DocumentRoot %(appdir)s/web
     <Directory %(appdir)s/web>
